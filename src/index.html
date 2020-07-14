@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo - Cart Checkout</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <h1>Demo - Cart Checkout (M-Pesa)</h1>
+    <h2>Items on Sale!!</h2>
+    <div class="main-row">
+      <div class="product-list">
+        <div class="product-container">
+          <img src="./img/motorola.jpg" alt="Motorola" />
+          <p>Motoroal G Stylus</p>
+          <p>Ksh 10 only!</p>
+          <button class="btn btn-add-to-cart" onclick="addToCart('motorola')">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+        <div class="product-container">
+          <img src="./img/samsung.jpg" alt="Samsung" />
+          <p>Samsung Galazy A51</p>
+          <p>Ksh 10 only!</p>
+          <button class="btn btn-add-to-cart" onclick="addToCart('samsung')">
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="cart-container">
+        <h2>Cart</h2>
+        <div class="cart-header">
+          <p>Name</p>
+          <p>Quantity</p>
+          <p>Price(Ksh)</p>
+          <p>Total(Ksh)</p>
+        </div>
+        <div class="cart-list">
+          <div class="item">
+            <small><em>Empty</em></small>
+          </div>
+        </div>
+
+        <h3>Total: Ksh <span class="cart-total">0</span></h3>
+        <button class="btn" onclick="toggleCheckoutModal()">Checkout</button>
+      </div>
+    </div>
+
+    <div class="checkout-modal hide">
+      <div class="modal-body">
+        <div class="modal-header">
+          <h1>Checkout</h1>
+
+          <button class="btn" onclick="toggleCheckoutModal()">
+            <b>&times;</b>
+          </button>
+        </div>
+        <p>1. Enter the M-Pesa phone number you wish to pay with.</p>
+        <input
+          class="text-input mpesa-phone-number"
+          type="tel"
+          name=""
+          id=""
+          placeholder="+2547..."
+        />
+        <p>
+          2. Proceed to payment. You will be prompted to enter your M-Pesa PIN.
+        </p>
+        <button class="btn btn-make-payment" onclick="lnm()">
+          Make payment
+        </button>
+        <p class="notice success"></p>
+        <p class="notice err"></p>
+        <p>
+          <small>
+            Please wait to enter your M-Pesa PIN before proceeding to the next
+            step.
+          </small>
+        </p>
+
+        <p>
+          3. Enter the transaction code you received to confirm payment.
+        </p>
+        <input class="text-input" type="text" placeholder="AB123456789" />
+        <button class="btn btn-make-payment">
+          Confirm Payment
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./js/bundle.js"></script>
+</html>
