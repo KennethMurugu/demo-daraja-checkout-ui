@@ -1,4 +1,4 @@
-import { addToCart, toggleCheckoutModal } from '../cart'
+import { addToCart, toggleCheckoutModal } from './cart'
 import { lnm } from './lnm'
 
 window.addToCart = addToCart
