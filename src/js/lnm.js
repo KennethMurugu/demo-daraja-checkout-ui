@@ -1,4 +1,4 @@
-import { getCartTotal } from '../cart'
+import { getCartTotal } from './cart'
 
 let errMsg = document.querySelector('.notice.err')
 let successMsg = document.querySelector('.notice.success')
