@@ -1,6 +1,7 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const DotenvPlugin = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/js/index.js',
@@ -22,5 +23,6 @@ module.exports = {
         { context: 'src/', from: 'css', to: '../dist/css' },
       ],
     }),
+    new DotenvPlugin()
   ],
 }
