@@ -11,8 +11,8 @@ export function lnm() {
 }
 const BASE_URL =
   process.env.NODE_ENV == 'development'
-    ? 'http://localhost:8081/demo-cart-checkout'
-    : 'https://kenkim.co.ke/demo-cart-checkout'
+    ? 'http://localhost:8081'
+    : 'https://139.162.229.98:8081'
 
 function getOAuthToken() {
   const url = BASE_URL + '/oauthtoken'
